@@ -153,7 +153,7 @@ def build_description(summary, description):
 def combine_expressions(expressions, relation='AND', licensing=Licensing()):
     res = ""
     if len(expressions) == 0:
-        return " " 
+        return 
     else:
         for i in range(0,len(expressions)):
             res = expressions[i] + relation + expressions[i+1]
