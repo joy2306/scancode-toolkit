@@ -151,6 +151,13 @@ def build_description(summary, description):
 
 
 def combine_expressions(expressions, relation='AND', licensing=Licensing()):
+    res = ""
+    if len(expressions) == 0:
+        return " " 
+    else:
+        for i in range(0,len(expressions)):
+            res = expressions[i] + relation + expressions[i+1]
+        return res
     """
     Return a combined license expression string with relation, given a list of
     license expressions strings.
